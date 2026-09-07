@@ -1,0 +1,11 @@
+# Kompilat, ikke kildekode. Kodelek bygger .class-filer ved siden av .java-
+# fila; de er maskinlesbare, endrer seg ved hver kjøring, og ville laget en
+# commit hvert kvarter uten at du hadde skrevet en linje.
+*.class
+*.hi
+*.o
+__pycache__/
+*.pyc
+
+# macOS legger denne i hver mappe du åpner i Finder.
+.DS_Store

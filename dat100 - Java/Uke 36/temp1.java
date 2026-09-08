@@ -21,13 +21,19 @@ public class temp1 {
             if (i == temp.length - 1) System.out.print("]");
         }
         System.out.println();
+        System.out.println();
         
         System.out.println("Oppgave2");
         
         //Skriv om fra celcius til farenheit.
-        int f = c * 9 / 5 + 32;
-        for (int f < temp.length) {
-            System.out.print("test");
+        
+        for (int i = 0; i < temp.length; i++) {
+            temp[i] = temp[i] * 9 / 5 + 32;
+            
+            if (i == 0) System.out.print("[ ");
+            System.out.print(temp[i] + ", ");
+            if (i == temp.length - 1) System.out.print("]");
+    
         }
     }
 }

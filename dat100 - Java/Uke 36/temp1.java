@@ -32,7 +32,6 @@ public class temp1 {
             if (i == 0) System.out.print("[ ");
             System.out.print(temp[i] + ", ");
             if (i == temp.length - 1) System.out.print("]");
-    
         }
         
         System.out.println("");
@@ -43,8 +42,9 @@ public class temp1 {
         int hoyest = temp[0];
         
         for (int i = 1; i < temp.length; i++) {
-            if (temp[i] > hoyest);
+            if (temp[i] > hoyest) {
             hoyest = temp[i];
+            }
         }
         System.out.print("Høyest: " + hoyest + " farenheit");
     }

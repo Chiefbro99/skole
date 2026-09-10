@@ -1,96 +1,103 @@
-//Obligatorisk skoleprøve i DAT100 - UKE 37 DEL2
+// Obligatorisk skoleprøve i DAT100 - UKE 37 DEL2
+import java.util.Scanner;
+
 public class prove {
+
     public static void main(String[] args) {
-        //Oppgave 1 (vekt 20%)
-        //a)
+
+        // === Oppgave 1a ===
         int a = 7;
         if (a <= 0 || a >= 0) {
-            System.out.println(a);
+            System.out.println("Tallet er: " + a);
         }
         
-        
-        //b)
-        if (a >= 5 && a <= 8) {
-            System.out.print(a + " er innenfor intervallet");
+        System.out.println("");
+
+        // === Oppgave 1b ===
+        int b = 4;
+        if (b >= 5 && b <= 8) {
+            System.out.println("- " + b + " er innenfor intervallet");
         } else {
-            System.out.print(a + " er utenfor intervallet");
+            System.out.println(b + " er utenfor intervallet");
         }
         
-        //c)
-        
+        System.out.println("");
+
+        // === Oppgave 1c ===
         String s = "tomt";
         int verdi = 3;
         switch (verdi) {
             case 0:
-                s = "null";
+                s = "Null";
                 break;
             case 1:
-                s = "en";
+                s = "En";
                 break;
             case 2:
-                s = "to";
+                s = "To";
                 break;
             case 3:
-                s = "tre";
+                s = "Tre";
                 break;
-            case 4: 
-                s = "fire";
+            case 4:
+                s = "Fire";
                 break;
             default:
-                s = "ulovlig verdi";
+                s = "Ulovlig verdi";
                 break;
         }
-        
-        //Oppgave 2 
-        //Finn ukjent heltall return; 
+        System.out.println(s);
+
+        // === Oppgave 3: summerer heltall til brukeren skriver 0 ===
         Scanner tastatur = new Scanner(System.in);
-        
+
+         System.out.println("");
+
         int antall = 0;
         int sum = 0;
         int tallVerdi;
-        
+
         do {
-            System.out.print("Skriv et heltall: ");
+            System.out.print("Skriv et heltall (0 avslutter): ");
             String tall = tastatur.nextLine();
-            tallVerdi = Integer.parseInt(tall);    
-            
-            if (tallverdi != 0) {
+            tallVerdi = Integer.parseInt(tall);
+
+            if (tallVerdi != 0) {
                 sum = sum + tallVerdi;
                 antall = antall + 1;
             }
-            
-        } while (tallverdi != 0);
+
+        } while (tallVerdi != 0);
+
+        System.out.println("Antall tall: " + antall);
+        System.out.println("Sum: " + sum);
         
-        System.out.print("Antall tall: " + antall);
-        System.out.print("Sum: " + sum);
+        tastatur.close();
         
-        //Oppgave 4
-        //Gjør om double til int for heltall og legger til z siden vi skal finne en metode av tre heltall
-        public static int min(int x, int y, int z) {
-            int m = x;
-            if (y > m) {
-                m = y;
-            }
-            
-            if (z < m) {
-                m = z;
-            }
-            
-            return m;
-        }
-        
-        //3 heltall + skriver ut minste
-        int a = 4, b = 5, c = 8;
-        int minste = min(a,b,c);
-        System.out.print("Det minste tallet er " + minste);
-        
-        //oppgave 5
-        
+        // === Oppgave 4b: kaller min() — metoden står nederst ===
+        int x = 4, y = 5, z = 8;
+        int minste = min(x, y, z);
+        System.out.println("Det minste tallet er " + minste);
+
+        // === Oppgave 5b: kaller arealSirkel() — metoden står nederst ===
         double areal = arealSirkel(1.5);
-        System.out.print("Arealet av sirkelen er: " + areal);
-        
-        public static double arealSirkel(double radius);
+        System.out.println("Arealet av sirkelen er: " + areal);
+    }
+
+    // === Oppgave 4a: finner det minste av tre heltall ===
+    public static int min(int x, int y, int z) {
+        int m = x;
+        if (y < m) {
+            m = y;
+        }
+        if (z < m) {
+            m = z;
+        }
+        return m;
+    }
+
+    // === Oppgave 5a: regner ut arealet av en sirkel ===
+    public static double arealSirkel(double radius) {
         return Math.PI * radius * radius;
     }
-    
 }

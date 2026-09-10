@@ -51,7 +51,8 @@ public class prove {
         
         do {
             System.out.print("Skriv et heltall: ");
-            String tall = tastatur.nextLine();    
+            String tall = tastatur.nextLine();
+            tallVerdi = Integer.parseInt(tall);    
             
             if (tallverdi != 0) {
                 sum = sum + tallVerdi;
@@ -79,14 +80,14 @@ public class prove {
         }
         
         //3 heltall + skriver ut minste
-        int a = 4, b = 5, c = 8
+        int a = 4, b = 5, c = 8;
         int minste = min(a,b,c);
         System.out.print("Det minste tallet er " + minste);
         
         //oppgave 5
         
         double areal = arealSirkel(1.5);
-        System.out.print("Arealet av sirkelen er: " + areal)
+        System.out.print("Arealet av sirkelen er: " + areal);
         
         public static double arealSirkel(double radius);
         return Math.PI * radius * radius;

@@ -8,6 +8,7 @@ public class prove {
         // === Oppgave 1a ===
         int a = 7;
         if (a <= 0 || a >= 0) {
+            System.out.println("Oppgave 1a)");
             System.out.println("Tallet er: " + a);
         }
         
@@ -16,8 +17,10 @@ public class prove {
         // === Oppgave 1b ===
         int b = 4;
         if (b >= 5 && b <= 8) {
+            System.out.println("Oppgave 1b)");
             System.out.println("- " + b + " er innenfor intervallet");
         } else {
+            System.out.println("Oppgave 1b)");
             System.out.println(b + " er utenfor intervallet");
         }
         
@@ -46,19 +49,34 @@ public class prove {
                 s = "Ulovlig verdi";
                 break;
         }
+        
+        System.out.println("Oppgave 1c)");
         System.out.println(s);
+
+        // === Oppgave 5b: kaller arealSirkel() — metoden står nederst ===
+        double areal = arealSirkel(1.5);
+        System.out.println("Oppgave 5b)");
+        System.out.println("Arealet av sirkelen er: " + areal);
 
         // === Oppgave 3: summerer heltall til brukeren skriver 0 ===
         Scanner tastatur = new Scanner(System.in);
 
-         System.out.println("");
+        System.out.println("");
+        
+        // === Oppgave 4b: kaller min() — metoden står nederst ===
+        int x = 4, y = 5, z = 8;
+        int minste = min(x, y, z);
+        System.out.println("Oppgave 4b)");
+        System.out.println("Det minste tallet er av; " + x + ", " + y + ", " + z + ", " + "er: " + minste);
+        
+        System.out.println("");
 
         int antall = 0;
         int sum = 0;
         int tallVerdi;
 
         do {
-            System.out.print("Skriv et heltall (0 avslutter): ");
+            System.out.print("Skriv et tilfeldig heltall; (0 avslutter): ");
             String tall = tastatur.nextLine();
             tallVerdi = Integer.parseInt(tall);
 
@@ -74,14 +92,8 @@ public class prove {
         
         tastatur.close();
         
-        // === Oppgave 4b: kaller min() — metoden står nederst ===
-        int x = 4, y = 5, z = 8;
-        int minste = min(x, y, z);
-        System.out.println("Det minste tallet er " + minste);
-
-        // === Oppgave 5b: kaller arealSirkel() — metoden står nederst ===
-        double areal = arealSirkel(1.5);
-        System.out.println("Arealet av sirkelen er: " + areal);
+        System.out.println("");
+         
     }
 
     // === Oppgave 4a: finner det minste av tre heltall ===
@@ -95,7 +107,7 @@ public class prove {
         }
         return m;
     }
-
+    
     // === Oppgave 5a: regner ut arealet av en sirkel ===
     public static double arealSirkel(double radius) {
         return Math.PI * radius * radius;

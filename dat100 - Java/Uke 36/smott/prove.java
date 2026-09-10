@@ -22,22 +22,22 @@ public class prove {
         int verdi = 3;
         switch (verdi) {
             case 0:
-                s = null;
+                s = "null";
                 break;
             case 1:
-                s = en;
+                s = "en";
                 break;
             case 2:
-                s = to;
+                s = "to";
                 break;
             case 3:
-                s = tre;
+                s = "tre";
                 break;
             case 4: 
-                s = fire;
+                s = "fire";
                 break;
             default:
-                s = ulovlig verdi;
+                s = "ulovlig verdi";
                 break;
         }
         

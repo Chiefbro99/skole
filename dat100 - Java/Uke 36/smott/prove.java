@@ -47,11 +47,49 @@ public class prove {
         
         int antall = 0;
         int sum = 0;
-        int tall;
+        int tallVerdi;
         
         do {
-            String tallStreng = showInputDialog("Forklarende tekst");
+            System.out.print("Skriv et heltall: ");
+            String tall = tastatur.nextLine();    
             
-        } while ();
+            if (tallverdi != 0) {
+                sum = sum + tallVerdi;
+                antall = antall + 1;
+            }
+            
+        } while (tallverdi != 0);
+        
+        System.out.print("Antall tall: " + antall);
+        System.out.print("Sum: " + sum);
+        
+        //Oppgave 4
+        //Gjør om double til int for heltall og legger til z siden vi skal finne en metode av tre heltall
+        public static int min(int x, int y, int z) {
+            int m = x;
+            if (y > m) {
+                m = y;
+            }
+            
+            if (z < m) {
+                m = z;
+            }
+            
+            return m;
+        }
+        
+        //3 heltall + skriver ut minste
+        int a = 4, b = 5, c = 8
+        int minste = min(a,b,c);
+        System.out.print("Det minste tallet er " + minste);
+        
+        //oppgave 5
+        
+        double areal = arealSirkel(1.5);
+        System.out.print("Arealet av sirkelen er: " + areal)
+        
+        public static double arealSirkel(double radius);
+        return Math.PI * radius * radius;
     }
+    
 }

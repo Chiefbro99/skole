@@ -1,5 +1,5 @@
-/* Denne koden skal oppdatere en array */
-public class Oppdatering {
+/* Denne koden skal oppdatere en array x ganger, i samme for løkke istedenfor å skrive ut manuelt hver gang*/
+public class Oppdatering2 {
     public static void main(String[] args) {
         System.out.println("Hei fra Oppdatering!");
         
@@ -9,23 +9,16 @@ public class Oppdatering {
         skrivUt(tab); //1 2 3 4 5 6
         
         
-        System.out.println(""); 
-        
         //skriv ut oppdatert array
         
-        for (int x = 0; x < tab.length; x++) {
-            tab[x]++;
+        for (int runde = 0; runde < 7; runde++) {
+            for (int x = 0; x < tab.length; x++) {
+                tab[x]++;
+            }
+            skrivUt(tab); //2 3 4 5 6 7 og så 3 4 5 6 7 8
+            
         }
         
-        skrivUt(tab); //2 3 4 5 6 7
-        
-        System.out.println(""); 
-        
-        for (int x = 0; x < tab.length; x++) {
-            tab[x]++;
-        }
-        
-        skrivUt(tab); //3 4 5 6 7 8
     }
     
     private static void skrivUt(int[] tab) {
@@ -33,6 +26,6 @@ public class Oppdatering {
         for (int x : tab) {
             System.out.print(x + " ");
         }
-        System.out.print("]");
+        System.out.println("]");
     }
 }

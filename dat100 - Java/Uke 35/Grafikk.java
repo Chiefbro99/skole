@@ -6,7 +6,7 @@ public class Grafikk extends EasyGraphics {
     }
     
     public void run() {
-        makeWindow("Grafikk", 350, 150);
-        drawCircle(150, 70, 60);
+        makeWindow("Grafikk", 1400, 600);
+        drawCircle(300, 140, 120);
     }
 }

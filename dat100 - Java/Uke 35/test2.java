@@ -13,3 +13,7 @@ public class test2 {
         minScanner.close(); // Lukker scanneren etter bruk
     }
 }
+
+import java.util.Scanner;
+
+public class test2

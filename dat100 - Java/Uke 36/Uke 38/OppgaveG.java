@@ -20,9 +20,29 @@ public class OppgaveG {
        
        //Oppgave c
        tabell[2] = 7;
-       System.out.println(tabell[2]);
+       System.out.println(Arrays.toString(tabell));
+       //Eller
+       tabell[2] = 5;
+       for (int x : tabell) {
+           System.out.print(x + " ");
+       }
+       System.out.println();
+       //Skriver ut oppgave d
+       skrivUt(tabell);
+       
        
     }
+    
+    public static void skrivUt(int[] tabell) {
+       //Oppgave d og e
+       //Skriv ut innholdet ved bruk av en for-løkke med indeks
+       for (int i : tabell) {
+           System.out.print(x + " ");
+       }
+       System.out.println();
+    }
 }
+
+
 
 

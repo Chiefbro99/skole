@@ -32,6 +32,14 @@ public class OppgaveG {
        
         System.out.println(finnes(tabell, 7));   // true
         System.out.println(finnes(tabell, 3));   // true
+        
+        System.out.println();
+        
+        //oppgave h
+        int[] snudd = skiftfortegn(tabell);
+        
+        skrivUt(tabell);
+        skrivUt(snudd);
     }
     
     public static void skrivUt(int[] tabell) {
@@ -58,9 +66,16 @@ public class OppgaveG {
         System.out.println(tall + " finnes ikke i tabellen.");
         return false; 
     } 
-    
+    //oppgave h
     public static int[] skiftfortegn (int[] tabell) {
-        //Lag et nytt arr
+        //Lag et nytt array med samme lengde som det innkommende
+        //Det er dette vi skal fylle og returnere
+        int[] ny = new int[tabell.length];
+        
+        for (int i = 0; i < tabell.length; i++) {
+            ny[i] = -tabell[i]; //minus foran snur fortegnet: 3 --> -3
+        }
+        return ny;
     }
 }
 

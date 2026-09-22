@@ -10,7 +10,7 @@ public class OppgaveG2 {
 
         showMessageDialog(null,"Areal: " + a);
     }
-    w23-.d,
+    
     private static int areal(int bredde, int hoyde) {
 
         int flateareal = bredde * hoyde;

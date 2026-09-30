@@ -9,3 +9,10 @@ __pycache__/
 
 # macOS legger denne i hver mappe du åpner i Finder.
 .DS_Store
+
+# dat100-oblig2 er sitt EGET git-repo (IMStacking/dat100-oblig2, gruppas
+# innlevering). Uten denne linja ville `git add -A` i synkejobben lagt den
+# inn som en gitlink — en grå mappe på Chiefbro99/skole som ikke lar seg
+# åpne, og der innholdet aldri følger med. Den synkes mot sin egen GitHub,
+# ikke mot denne. Lagt til 2026-09-30.
+dat100 - Java/Uke 40/dat100-oblig2/

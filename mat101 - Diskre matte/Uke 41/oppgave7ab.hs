@@ -1,22 +1,25 @@
 --Oppgave 7a)
 --Implikasjon finnes ikke i Haskell, så vi bygger den selv.
 --Vi bruker loven A -> B er det samme som (ikke A) eller B.
---Funksjonen tar inn to sannhetsverdier og gir ut én.
 implikasjon :: Bool -> Bool -> Bool
 implikasjon p q = not p || q
+
+--Oppgave 7b)
+--Formelen fra Q2 a): (P v Q) ^ (¬P v ¬Q)
+--To variabler inn, én sannhetsverdi ut.
+--Parentesene må være med, ellers binder && sterkere enn ||
+formel :: Bool -> Bool -> Bool
+formel p q = (p || q) && (not p || not q)
 
 main :: IO ()
 main = do
   --Oppgave 7a)
-  --Vi tester alle fire kombinasjoner for å sjekke sannhetstabellen
-  putStrLn ("True  -> True  = " ++ show (implikasjon True True))
-  putStrLn ("True  -> False = " ++ show (implikasjon True False))
-  putStrLn ("False -> True  = " ++ show (implikasjon False True))
-  putStrLn ("False -> False = " ++ show (implikasjon False False))
+  putStrLn "Sannhetstabell for implikasjon:"
+  mapM_ print [(p, q, implikasjon p q) | p <- [True, False], q <- [True, False]]
 
   putStrLn ""
 
-  --Alternativt kan vi skrive ut hele tabellen med listekompresjon
-  --Vi henter ut hver kombinasjon av p og q fra [True, False]
-  let tabell = [(p, q, implikasjon p q) | p <- [True, False], q <- [True, False]]
-  putStrLn ("Sannhetstabell: " ++ show tabell)
+  --Oppgave 7b)
+  --Vi lager alle fire kombinasjoner av p og q og regner ut formelen for hver
+  putStrLn "Sannhetstabell for (P v Q) ^ (¬P v ¬Q):"
+  mapM_ print [(p, q, formel p q) | p <- [True, False], q <- [True, False]]

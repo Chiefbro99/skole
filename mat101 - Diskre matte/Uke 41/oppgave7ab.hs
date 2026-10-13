@@ -18,7 +18,7 @@ main = do
   mapM_ print [(p, q, implikasjon p q) | p <- [True, False], q <- [True, False]]
 
   putStrLn ""
-
+23
   --Oppgave 7b)
   --Vi lager alle fire kombinasjoner av p og q og regner ut formelen for hver
   putStrLn "Sannhetstabell for (P v Q) ^ (¬P v ¬Q):"

@@ -28,7 +28,9 @@ public class DailyPower {
 
         double sum = 0;
 
-        // TODO
+        for (double forbruk : usage) {
+            sum = sum + forbruk;
+        }
 
         return sum;
     }

@@ -1,0 +1,1217 @@
+/* ===================================================================
+   stil.css — stilarket for hele nettstedet Bolig i Bergen A/S.
+   Alle sidene bruker denne ene fila.
+
+   Innhold:
+     1. Grunnlag          6. Teamet
+     2. Byggeklosser      7. Løsningssider
+     3. Toppmeny          8. Løsningsoversikten
+     4. Toppbilder        9. Personsider
+     5. Forsiden         10. Kontaktskjema
+                         11. Bunntekst
+                         12. Mindre skjermer
+   =================================================================== */
+
+
+/* ============ 1. GRUNNLAG ============ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1f2937;
+  background-color: #ffffff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  color: #1b2559;
+  line-height: 1.2;
+}
+
+p {
+  margin-top: 0;
+}
+
+
+/* ============ 2. BYGGEKLOSSER ============ */
+
+/* Sentrert spalte med luft i sidene */
+.innhold {
+  width: calc(100% - 40px);
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* Tekst bare skjermlesere ser */
+.skjult {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* Liten merkelapp over en overskrift */
+.seksjon-merke {
+  margin-bottom: 8px;
+  color: #4a5568;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Midtstilt overskrift med luft under */
+.seksjon-tittel {
+  margin-bottom: 38px;
+  text-align: center;
+}
+
+.seksjon-tittel h2, .om-oss h1, .om-oss h2, .historie h2 {
+  margin-bottom: 16px;
+  font-size: clamp(30px, 4vw, 42px);
+}
+
+/* Blå knapp */
+.knapp {
+  padding: 10px 18px;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: #16205c;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.knapp:hover {
+  background-color: #1b2559;
+  transform: translateY(-1px);
+}
+
+/* Tabeller */
+.tabell {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+
+.tabell th, .tabell td {
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid #ccc;
+}
+
+.tabell thead {
+  color: #222;
+  background-color: #eee;
+}
+
+.tabell caption, .graa-boks caption {
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Lenke tilbake til forsiden */
+.tilbake {
+  margin-top: 30px;
+}
+
+.tilbake a {
+  color: #1b2559;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.tilbake a:hover {
+  text-decoration: underline;
+}
+
+
+/* ============ 3. TOPPMENY ============ */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  min-height: 76px;
+  padding: 14px 24px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e4e8f0;
+}
+
+.logo {
+  color: #1b2559;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
+/* Menyen fyller plassen mellom logoen og verktøyene */
+.navbar nav {
+  flex: 1;
+}
+
+.meny {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+/* Hvert valg tar like stor del av bredden */
+.meny > li {
+  flex: 1;
+}
+
+.meny a {
+  display: block;
+  color: #4a5568;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Valgene øverst er knapper, ikke små tekstlenker */
+.meny > li > a {
+  padding: 13px 18px;
+  font-size: 16px;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #f4f6fa;
+  border: 1px solid #e4e8f0;
+  border-radius: 10px;
+}
+
+/* Mørk knapp når du peker på den, eller står på sida */
+.meny > li > a:hover, .meny > li > a[aria-current="page"] {
+  color: #ffffff;
+  background-color: #16205c;
+  border-color: #16205c;
+}
+
+.meny a:focus-visible, .logo:focus-visible, .knapp:focus-visible {
+  outline: 3px solid rgba(27, 37, 89, 0.35);
+  outline-offset: 4px;
+}
+
+/* Nedtrekksmeny */
+.dropdown {
+  position: relative;
+}
+
+.undermeny {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  min-width: 180px;
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+}
+
+.undermeny a {
+  display: block;
+  padding: 10px 16px;
+  color: #222222;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.undermeny a:hover, .undermeny a:focus-visible {
+  background: #eeeeee;
+}
+
+.dropdown:hover > .undermeny, .dropdown:focus-within > .undermeny {
+  display: block;
+}
+
+/* Søkefelt og Min side-knapp */
+.verktoy {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sok {
+  display: flex;
+  align-items: center;
+  padding: 8px 14px;
+  border: 1px solid #d7dce8;
+  border-radius: 8px;
+}
+
+.sok input {
+  width: 150px;
+  padding: 0;
+  font: inherit;
+  font-size: 14px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.sok:focus-within {
+  border-color: #1b2559;
+  box-shadow: 0 0 0 3px rgba(27, 37, 89, 0.12);
+}
+
+
+/* ============ 4. TOPPBILDER ============ */
+
+/* Bergensbilde med mørkt slør over */
+.intro {
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  min-height: 560px;
+  padding: 80px 24px;
+  text-align: center;
+  background: linear-gradient(rgba(15, 25, 75, 0.65), rgba(15, 25, 75, 0.65)),
+              url("../bilder/bergen-bakgrunn.png") center / cover no-repeat;
+}
+
+.intro-innhold {
+  max-width: 700px;
+}
+
+.intro h1 {
+  margin-bottom: 16px;
+  color: #ffffff;
+  font-size: clamp(42px, 7vw, 72px);
+}
+
+.intro p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #ffffff;
+  font-size: clamp(17px, 2vw, 21px);
+}
+
+/* Blå toppflate på forsiden */
+.forside-intro {
+  padding: 120px 24px 96px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #16205c;
+  background-image: linear-gradient(160deg, #16205c 0%, #2a3a82 100%);
+}
+
+.forside-intro-innhold {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.forside-intro h1 {
+  margin: 0 0 16px;
+  color: #ffffff;
+  font-size: 52px;
+  line-height: 1.1;
+}
+
+.forside-intro p {
+  margin: 0;
+  font-size: 19px;
+  opacity: 0.9;
+}
+
+/* Lys toppflate på løsningssida */
+.forside {
+  padding: 72px 24px;
+  text-align: center;
+  background-color: #f4f6fa;
+}
+
+.forside h1 {
+  margin-bottom: 16px;
+  font-size: clamp(32px, 5vw, 52px);
+}
+
+.forside p {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+
+/* ============ 5. FORSIDEN ============ */
+
+/* Faktaboks ved siden av velkomstteksten */
+.fakta {
+  min-width: 320px;
+  padding: 28px 32px;
+  background-color: #f7f8fc;
+  border: 1px solid #e4e8f0;
+  border-radius: 12px;
+}
+
+/* Overskriften i faktaboksen er mindre enn en vanlig h2 */
+.fakta h2 {
+  margin-bottom: 18px;
+  font-size: 19px;
+}
+
+.fakta-liste {
+  margin: 0;
+}
+
+.fakta-liste dt {
+  margin-top: 16px;
+  color: #6b7280;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fakta-liste dd {
+  margin-left: 0;
+  color: #16205c;
+  font-weight: bold;
+}
+
+/* De fem områdekortene: knappen skyves ned i bunnen */
+.verdi.tilbud {
+  display: flex;
+  flex-direction: column;
+}
+
+.verdi.tilbud .knapp {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.tilbud-punkter {
+  margin: 0 0 24px;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.tilbud-punkter li {
+  margin-bottom: 6px;
+}
+
+/* Forsiden: kortene flyter og midtstilles når de ikke går opp i tre */
+.omrader .verdi-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.omrader .verdi {
+  flex: 0 1 340px;
+}
+
+/* Lenkeliste på grå flate */
+.tjenesteliste {
+  max-width: 520px;
+  margin: 24px auto 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.tjenesteliste li {
+  border-bottom: 1px solid #e4e8f0;
+}
+
+.tjenesteliste li:last-child {
+  border-bottom: none;
+}
+
+.tjenesteliste a {
+  display: block;
+  padding: 14px 4px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.tjenesteliste a:hover {
+  text-decoration: underline;
+}
+
+
+/* ============ 6. SEKSJONER OG KORT ============ */
+
+/* Tekst og bilde ved siden av hverandre */
+.om-oss {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 64px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.om-tekst {
+  max-width: 600px;
+  margin-bottom: 0;
+  color: #4a5568;
+  font-size: 18px;
+}
+
+/* Stort bilde med avrundede hjørner */
+.bergen-bilde {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 18px 45px rgba(27, 37, 89, 0.16);
+}
+
+/* Smal, midtstilt tekst på grå flate */
+.historie {
+  padding: 88px 24px;
+  text-align: center;
+  background-color: #f4f6fa;
+}
+
+.smal-innhold {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.historie p:last-child {
+  margin-bottom: 0;
+  color: #4a5568;
+  font-size: 18px;
+}
+
+/* Rutenett med kort */
+.verdier {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.verdi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.verdi {
+  min-height: 250px;
+  padding: 32px;
+  background-color: #ffffff;
+  border: 1px solid #e4e8f0;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(27, 37, 89, 0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.verdi:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 35px rgba(27, 37, 89, 0.12);
+}
+
+.verdi-nummer {
+  display: block;
+  margin-bottom: 34px;
+  color: #1b2559;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.verdi h3 {
+  margin-bottom: 10px;
+  font-size: 23px;
+}
+
+.verdi p {
+  margin-bottom: 0;
+  color: #4a5568;
+}
+
+
+/* ============ 7. TEAMET ============ */
+
+.team {
+  padding: 96px 0;
+  background-color: #f4f6fa;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 28px;
+}
+
+.ansatt {
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid #e4e8f0;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(27, 37, 89, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.ansatt:hover {
+  transform: translateY(-5px);
+}
+
+.profilbilde {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center top;
+  background-color: #d7dce8;
+}
+
+.ansatt-tekst {
+  padding: 22px;
+}
+
+.ansatt h3 {
+  margin-bottom: 6px;
+  font-size: 20px;
+}
+
+.ansatt p {
+  margin-bottom: 0;
+  color: #4a5568;
+  font-weight: 600;
+}
+
+
+/* ============ 8. LØSNINGSSIDER ============ */
+/* Innvendig, utvendig, energisparing, prisestimat og utgifter */
+
+.bolig-side {
+  width: calc(100% - 40px);
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 70px 0 80px;
+}
+
+.bolig-intro {
+  padding: 40px 20px 60px;
+}
+
+.bolig-intro .seksjon-merke {
+  margin-bottom: 12px;
+  color: #1b2559;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.bolig-intro h1 {
+  max-width: 800px;
+  margin-bottom: 18px;
+  font-size: clamp(40px, 6vw, 64px);
+}
+
+.bolig-intro > p:last-child {
+  max-width: 700px;
+  margin-bottom: 0;
+  color: #4a5568;
+  font-size: 20px;
+}
+
+/* Liten kursiv merknad under ingressen */
+.merknad {
+  color: #6b7280;
+  font-size: 15px;
+  font-style: italic;
+}
+
+/* To kort ved siden av hverandre */
+.bolig-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.bolig-kort {
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid #e4e8f0;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(27, 37, 89, 0.07);
+}
+
+.bolig-kort img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.bolig-kort-tekst {
+  padding: 28px;
+}
+
+.bolig-kort h2 {
+  margin-bottom: 14px;
+  font-size: 28px;
+}
+
+.bolig-kort h3 {
+  margin-top: 22px;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.bolig-kort p {
+  color: #4a5568;
+}
+
+.bolig-kort ul {
+  margin-bottom: 0;
+  padding-left: 22px;
+}
+
+.bolig-kort li {
+  margin-bottom: 6px;
+}
+
+/* Grå boks med tabell eller liste */
+.graa-boks {
+  margin-top: 45px;
+  padding: 32px;
+  background-color: #f4f6fa;
+  border-radius: 14px;
+}
+
+.graa-boks h2 {
+  margin-bottom: 22px;
+}
+
+.graa-boks table {
+  width: 100%;
+  background-color: #ffffff;
+  border-collapse: collapse;
+}
+
+.graa-boks th, .graa-boks td {
+  padding: 14px 16px;
+  text-align: left;
+  border: 1px solid #d7dce8;
+}
+
+.graa-boks th {
+  color: #1b2559;
+  background-color: #e9edf5;
+}
+
+
+/* ============ 9. LØSNINGSOVERSIKTEN ============ */
+
+.losninger-side > h2, .losninger-side > p {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.losninger {
+  padding: 60px 20px 80px;
+  text-align: center;
+  background-color: #f8f9fc;
+}
+
+.losninger h2 {
+  margin-top: 0;
+  margin-bottom: 55px;
+  font-size: 38px;
+  letter-spacing: 1px;
+}
+
+.losning {
+  margin-bottom: 65px;
+}
+
+.losning h3 {
+  margin-bottom: 18px;
+  font-size: 23px;
+}
+
+.losning img {
+  width: 550px;
+  max-width: 90%;
+  height: 300px;
+  margin: 0 auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+
+.losning img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
+}
+
+
+/* ============ 10. PERSONSIDER ============ */
+
+/* Mørk topp med navnet */
+.profil-topp {
+  padding: 70px 24px;
+  text-align: center;
+  background-color: #16205c;
+}
+
+.profil-topp h1 {
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-size: 44px;
+}
+
+.profil-topp p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #e4e8f0;
+  font-size: 18px;
+}
+
+.profil-topp .seksjon-merke {
+  color: #d7dce8;
+}
+
+/* Luft mellom seksjonene */
+.profil-del {
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+/* Flytt utsnittet opp så hodet kommer med */
+.profil-bilde {
+  object-position: center top;
+}
+
+/* Punktliste og nummerert liste med ekstra luft */
+.punktliste, .stegliste {
+  padding-left: 22px;
+  line-height: 1.9;
+}
+
+/* Uthevet avsnitt med strek på venstre side */
+.sitat {
+  margin: 30px 0;
+  padding: 20px 24px;
+  font-size: 18px;
+  background-color: #f4f6fa;
+  border-left: 4px solid #16205c;
+}
+
+/* Delt topp: bilde til venstre, navn til høyre */
+.topp-delt {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  align-items: center;
+  gap: 50px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.topp-delt h1 {
+  margin-bottom: 14px;
+  font-size: 46px;
+}
+
+.topp-delt > p {
+  max-width: 520px;
+  color: #4a5568;
+  font-size: 19px;
+}
+
+.topp-bilde {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 14px;
+}
+
+/* Faktaliste: ord til venstre, svar til høyre */
+.faktaliste {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 28px;
+  margin: 0;
+  padding: 26px 30px;
+  background-color: #f4f6fa;
+  border-radius: 12px;
+}
+
+.faktaliste dt {
+  color: #1b2559;
+  font-weight: 700;
+}
+
+.faktaliste dd {
+  margin: 0;
+  color: #4a5568;
+}
+
+/* Tre små kort på rad */
+.minikort-rad {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.minikort {
+  padding: 26px;
+  background-color: #ffffff;
+  border: 1px solid #e4e8f0;
+  border-left: 4px solid #16205c;
+  border-radius: 10px;
+}
+
+.minikort h3 {
+  margin-bottom: 8px;
+  font-size: 19px;
+}
+
+.minikort p {
+  margin-bottom: 0;
+  color: #4a5568;
+}
+
+
+/* ============ 11. KONTAKTSKJEMA ============ */
+
+.kontakt {
+  padding: 96px 24px;
+  background-color: #16205c;
+}
+
+.kontakt-innhold {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: start;
+  gap: 64px;
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.kontakt-intro {
+  padding-top: 24px;
+}
+
+.kontakt .seksjon-merke {
+  color: #d7dce8;
+}
+
+.kontakt h2 {
+  margin-bottom: 16px;
+  color: #ffffff;
+  font-size: clamp(32px, 4vw, 44px);
+}
+
+.kontakt-intro > p:last-child {
+  max-width: 420px;
+  margin-bottom: 0;
+  color: #e4e8f0;
+  font-size: 18px;
+}
+
+.kontakt-skjema {
+  padding: 36px;
+  color: #1f2937;
+  text-align: left;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+}
+
+.skjema-rad {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.skjema-felt {
+  min-width: 0;
+  margin-bottom: 20px;
+}
+
+.skjema-felt input, .skjema-felt select, .skjema-felt textarea {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 12px 14px;
+  color: #1f2937;
+  font: inherit;
+  background-color: #ffffff;
+  border: 1px solid #d7dce8;
+  border-radius: 8px;
+  outline: none;
+}
+
+.skjema-felt textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.skjema-felt input::placeholder, .skjema-felt textarea::placeholder {
+  color: #718096;
+}
+
+.skjema-felt input:focus, .skjema-felt select:focus, .skjema-felt textarea:focus {
+  border-color: #1b2559;
+  box-shadow: 0 0 0 3px rgba(27, 37, 89, 0.12);
+}
+
+.send-knapp {
+  width: 100%;
+  padding: 12px 24px;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #16205c;
+  border: 2px solid #16205c;
+  border-radius: 8px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.send-knapp:hover {
+  color: #16205c;
+  background-color: #ffffff;
+}
+
+.send-knapp:focus-visible {
+  outline: 2px solid rgba(27, 37, 89, 0.3);
+  outline-offset: 2px;
+}
+
+
+/* ============ 12. BUNNTEKST ============ */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 35px 45px;
+  color: #ffffff;
+  text-align: left;
+  background-color: #111b55;
+}
+
+/* W3C-merket for gyldig CSS */
+.css-merke img {
+  display: block;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+
+/* ============ 13. MINDRE SKJERMER ============ */
+/* Fra bredest til smalest, så den smaleste regelen vinner */
+
+@media (max-width: 1050px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar nav {
+    order: 3;
+    width: 100%;
+  }
+
+  .meny {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .fakta {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .kontakt-innhold {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .kontakt-intro {
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .kontakt-intro > p:last-child {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .topp-delt {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .topp-bilde {
+    height: 340px;
+  }
+
+  .minikort-rad {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .navbar {
+    position: static;
+    justify-content: center;
+    padding: 18px;
+  }
+
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .meny {
+    gap: 8px 18px;
+  }
+
+  .verktoy {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .sok {
+    flex: 1;
+  }
+
+  .sok input {
+    width: 100%;
+  }
+
+  .intro {
+    min-height: 440px;
+  }
+
+  .om-oss {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+
+  .bergen-bilde {
+    height: 320px;
+  }
+
+  .historie, .team, .kontakt, .verdier {
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+
+  .verdi-grid, .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profilbilde {
+    height: 380px;
+  }
+
+  .profil-topp h1 {
+    font-size: 34px;
+  }
+
+  .bolig-side {
+    width: calc(100% - 30px);
+    max-width: 600px;
+    padding-top: 40px;
+  }
+
+  .bolig-intro {
+    padding: 20px 10px 40px;
+  }
+
+  .bolig-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bolig-kort img {
+    height: 240px;
+  }
+
+  .graa-boks {
+    padding: 20px;
+    overflow-x: auto;
+  }
+
+  .graa-boks table {
+    min-width: 600px;
+  }
+}
+
+@media (max-width: 700px) {
+  .forside-intro {
+    padding: 90px 20px 64px;
+  }
+
+  .forside-intro h1 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 550px) {
+  .kontakt {
+    padding: 68px 20px;
+  }
+
+  .kontakt-skjema {
+    padding: 24px 18px;
+  }
+
+  .skjema-rad {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

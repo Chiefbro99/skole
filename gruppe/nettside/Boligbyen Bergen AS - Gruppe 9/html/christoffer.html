@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="no">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Christoffer Blomqvist | BIB</title>
+
+    <!-- Felles stilark for hele nettstedet -->
+    <link rel="stylesheet" href="../css/stil.css">
+
+  </head>
+
+  <body>
+
+    <!-- MENY: lik som på de andre sidene -->
+    <header class="navbar">
+      <a href="index.html" class="logo">BIB</a>
+
+      <nav aria-label="Hovedmeny">
+        <ul class="meny">
+          <li>
+            <a href="om-prosjektet.html">Om prosjektet</a>
+          </li>
+
+          <li class="dropdown">
+            <a href="losninger.html">Løsninger ▾</a>
+            <ul class="undermeny">
+              <li>
+                <a href="innvendig.html">Innvendig</a>
+              </li>
+              <li>
+                <a href="utvendig.html">Utvendig</a>
+              </li>
+              <li>
+                <a href="energisparing.html">Energisparing</a>
+              </li>
+              <li>
+                <a href="prisestimat.html">Prisestimat</a>
+              </li>
+              <li>
+                <a href="utgifter.html">Utgifter</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="om-bib.html">Om oss ▾</a>
+            <ul class="undermeny">
+              <li>
+                <a href="christoffer.html" aria-current="page">Christoffer Blomqvist</a>
+              </li>
+              <li>
+                <a href="mathias.html">Mathias Hollevik</a>
+              </li>
+              <li>
+                <a href="elias.html">Elias Engesli</a>
+              </li>
+              <li>
+                <a href="noah.html">Noah Ingvaldsen</a>
+              </li>
+              <li>
+                <a href="diar.html">Diar Ali</a>
+              </li>
+              <li>
+                <a href="kristian.html">Kristian Steenslid Hopland</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="verktoy">
+        <form class="sok" action="#">
+          <label for="sokefelt" class="skjult">Søk på nettstedet</label>
+          <input type="search" id="sokefelt" name="sok" placeholder="Søk...">
+        </form>
+
+        <span class="knapp" aria-disabled="true" title="Min side er ikke laget ennå">
+          Min side
+        </span>
+      </div>
+    </header>
+
+
+    <main>
+
+      <!-- TOPP: navn og en kort setning om meg -->
+      <section class="profil-topp">
+        <p class="seksjon-merke">Om meg</p>
+        <h1>Christoffer Blomqvist</h1>
+        <p>
+          IT-student ved HVL, gründer i Bergen og veldig
+          opptatt av å bygge ting som gjør hverdagen enklere.
+        </p>
+      </section>
+
+
+      <!-- OM MEG: tekst til venstre, bilde til høyre -->
+      <section class="om-oss innhold">
+        <div class="om-tekst">
+          <p class="seksjon-merke">Hvem er jeg?</p>
+          <h2>Litt om meg selv</h2>
+
+          <p>
+            Jeg heter Christoffer Blomqvist, er 27 år og bor i Bergen.
+            Opprinnelig kommer jeg fra Stavanger, men flyttet hit for
+            studier og trivdes så godt at jeg ble værende. Høsten 2026
+            begynte jeg på bachelor i informasjonsteknologi ved
+            Høgskulen på Vestlandet, og i denne gruppen har jeg rollen
+            som CEO i prosjektet Bolig i Bergen A/S.
+          </p>
+
+          <p>
+            Veien min inn i IT har vært litt annerledes enn for mange
+            andre på kullet. Før jeg begynte å studere jobbet jeg som
+            personlig trener og i butikk med salg av elektronikk. Begge
+            jobbene handlet egentlig om det samme: å forstå hva en
+            person faktisk trenger, og så forklare en løsning på en
+            måte som gir mening for den som hører på. Det er en
+            erfaring jeg bruker mye nå som jeg bygger digitale
+            løsninger, for en god løsning er ikke bare teknisk riktig
+            — den må også være enkel å bruke.
+          </p>
+
+          <p>
+            Ved siden av studiene driver jeg mitt eget enkeltpersonforetak.
+            Der jobber jeg med automatisering og kunstig intelligens, og
+            jeg bygger blant annet en app for personlige trenere som
+            håndterer kunder, timeplan og fakturering. Jeg har ingen
+            formell kodebakgrunn fra før, så det meste har jeg lært ved
+            å bygge ting selv, bomme, lese meg opp og prøve på nytt.
+            Det er sannsynligvis den måten jeg lærer best på.
+          </p>
+        </div>
+
+        <img
+          src="../bilder/chris.jpg"
+          alt="Portrett av Christoffer Blomqvist"
+          class="bergen-bilde profil-bilde"
+        >
+      </section>
+
+
+      <!-- BAKGRUNN: tabell over utdanning og arbeidserfaring -->
+      <section class="innhold profil-del">
+        <p class="seksjon-merke">Bakgrunn</p>
+        <h2>Utdanning og erfaring</h2>
+
+        <p>
+          Under har jeg samlet bakgrunnen min i en enkel oversikt.
+          Erfaringen fra arbeidslivet er ikke teknisk, men den har gitt
+          meg mye trening i kundekontakt, salg og i å ta ansvar for egne
+          oppgaver.
+        </p>
+
+        <table class="tabell">
+          <caption>Oversikt over utdanning og arbeidserfaring</caption>
+          <thead>
+            <tr>
+              <th scope="col">Hva</th>
+              <th scope="col">Hvor</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Informasjonsteknologi</th>
+              <td>Høgskulen på Vestlandet</td>
+              <td>Pågående studier</td>
+            </tr>
+            <tr>
+              <th scope="row">Eget enkeltpersonforetak</th>
+              <td>Bergen</td>
+              <td>Aktivt</td>
+            </tr>
+            <tr>
+              <th scope="row">Personlig trener</th>
+              <td>Treningssenter</td>
+              <td>Tidligere</td>
+            </tr>
+            <tr>
+              <th scope="row">Salg av elektronikk</th>
+              <td>Butikk</td>
+              <td>Tidligere</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+
+      <!-- PROSJEKTER: hva jeg bygger på fritiden -->
+      <section class="innhold profil-del">
+        <p class="seksjon-merke">Prosjekter</p>
+        <h2>Ting jeg bygger</h2>
+
+        <p>
+          Det meste jeg kan om programmering har jeg lært gjennom egne
+          prosjekter. De viktigste akkurat nå er disse:
+        </p>
+
+        <table class="tabell">
+          <caption>Prosjekter jeg jobber med utenom studiet</caption>
+          <thead>
+            <tr>
+              <th scope="col">Prosjekt</th>
+              <th scope="col">Hva det er</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Treningsapp</th>
+              <td>Verktøy for personlige trenere: kunder, timeplan og faktura.</td>
+            </tr>
+            <tr>
+              <th scope="row">Egen assistent</th>
+              <td>Et automatiseringssystem som kjører på en liten server hjemme.</td>
+            </tr>
+            <tr>
+              <th scope="row">BIB-nettsiden</th>
+              <td>Dette gruppeprosjektet, der jeg jobber med HTML og CSS.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="sitat">
+          Den beste måten å lære noe på er å bygge noe du selv har lyst
+          til å bruke etterpå.
+        </p>
+      </section>
+
+
+      <!-- VEIEN VIDERE: mål fremover -->
+      <section class="innhold profil-del">
+        <p class="seksjon-merke">Veien videre</p>
+        <h2>Mine mål</h2>
+
+        <p>
+          Målet mitt er å kombinere det praktiske jeg har lært på egen
+          hånd med det faglige grunnlaget fra studiet. Jeg vil forstå
+          hvorfor ting fungerer, ikke bare at de gjør det. På sikt
+          ønsker jeg å jobbe med rådgivning innen automatisering og
+          kunstig intelligens, og fortsette å bygge egne løsninger.
+        </p>
+
+        <ul class="punktliste">
+          <li>Bli tryggere på programmering og systemdesign</li>
+          <li>Lære mer om hvordan nettsider bygges fra bunnen av</li>
+          <li>Bygge videre på de prosjektene jeg har startet</li>
+          <li>Jobbe med automatisering og kunstig intelligens</li>
+        </ul>
+      </section>
+
+    </main>
+
+
+    <footer>
+      <p>&copy; 2026 BIB</p>
+      <a href="https://jigsaw.w3.org/css-validator/check/referer"
+         class="css-merke">
+        <img src="../bilder/vcss.png" alt="Gyldig CSS" width="88" height="31">
+      </a>
+    </footer>
+
+  </body>
+</html>

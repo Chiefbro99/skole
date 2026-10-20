@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utgifter | BIB</title>
+    <link rel="stylesheet" href="../css/stil.css">
+  </head>
+  <body>
+    <header class="navbar">
+      <a href="index.html" class="logo">BIB</a>
+
+      <nav aria-label="Hovedmeny">
+        <ul class="meny">
+          <li>
+            <a href="om-prosjektet.html">Om prosjektet</a>
+          </li>
+
+          <li class="dropdown">
+            <a href="losninger.html">Løsninger ▾</a>
+            <ul class="undermeny">
+              <li>
+                <a href="innvendig.html">Innvendig</a>
+              </li>
+              <li>
+                <a href="utvendig.html">Utvendig</a>
+              </li>
+              <li>
+                <a href="energisparing.html">Energisparing</a>
+              </li>
+              <li>
+                <a href="prisestimat.html">Prisestimat</a>
+              </li>
+              <li>
+                <a href="utgifter.html" aria-current="page">Utgifter</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="om-bib.html">Om oss ▾</a>
+            <ul class="undermeny">
+              <li>
+                <a href="christoffer.html">Christoffer Blomqvist</a>
+              </li>
+              <li>
+                <a href="mathias.html">Mathias Hollevik</a>
+              </li>
+              <li>
+                <a href="elias.html">Elias Engesli</a>
+              </li>
+              <li>
+                <a href="noah.html">Noah Ingvaldsen</a>
+              </li>
+              <li>
+                <a href="diar.html">Diar Ali</a>
+              </li>
+              <li>
+                <a href="kristian.html">Kristian Steenslid Hopland</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="verktoy">
+        <form class="sok" action="#">
+          <label for="sokefelt" class="skjult">Søk på nettstedet</label>
+          <input type="search" id="sokefelt" name="sok" placeholder="Søk...">
+        </form>
+
+        <span class="knapp" aria-disabled="true" title="Min side er ikke laget ennå">
+          Min side
+        </span>
+      </div>
+    </header>
+
+    <main class="bolig-side">
+
+      <!-- Introduksjon -->
+      <section class="bolig-intro">
+        <p class="seksjon-merke">Utgifter</p>
+        <h1>Hva koster det å eie bolig?</h1>
+        <p>
+          Lånet er bare én del av regnestykket. Her går vi gjennom de
+          utgiftene som kommer hver måned og hvert år, slik at du kan
+          regne på hva boligen faktisk koster deg.
+        </p>
+        <p class="merknad">
+          Alle tall på denne siden er oppdiktede eksempeltall laget
+          for skoleprosjektet. De er ikke hentet fra en ekte kilde.
+        </p>
+      </section>
+
+      <!-- Utgiftstyper -->
+      <section class="bolig-grid" aria-label="Typer boligutgifter">
+
+        <!-- Lån og renter -->
+        <article class="bolig-kort">
+          <img
+            src="../bilder/boligkjop.jpeg"
+            alt="Par som ser på en bolig de vurderer å kjøpe"
+          >
+          <div class="bolig-kort-tekst">
+            <h2>Lån og renter</h2>
+            <p>
+              Den største utgiften for de fleste. Terminbeløpet endrer
+              seg når renten endrer seg, så det lønner seg å regne på
+              hva du tåler før du legger inn bud.
+            </p>
+            <h3>Dette bør du regne på</h3>
+            <ul>
+              <li>Terminbeløp ved dagens rente.</li>
+              <li>Terminbeløp hvis renten stiger to prosentpoeng.</li>
+              <li>Hvor mye som er avdrag og hvor mye som er renter.</li>
+              <li>Gebyr for å ha lånet og betale terminene.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Strøm og oppvarming -->
+        <article class="bolig-kort">
+          <img
+            src="../bilder/innvendig.jpg"
+            alt="Oppholdsrom i en bolig"
+          >
+          <div class="bolig-kort-tekst">
+            <h2>Strøm og oppvarming</h2>
+            <p>
+              Varierer mye gjennom året og med hvor godt isolert
+              boligen er. I Bergen er oktober til mars de dyre
+              månedene.
+            </p>
+            <h3>Dette påvirker regningen</h3>
+            <ul>
+              <li>Størrelsen på boligen og hvor godt den er isolert.</li>
+              <li>Hvordan boligen varmes opp.</li>
+              <li>Nettleie, som kommer i tillegg til strømprisen.</li>
+              <li>Hvor mange som bor der.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Faste avgifter -->
+        <article class="bolig-kort">
+          <img
+            src="../bilder/bergen.png"
+            alt="Utsikt over boligområder i Bergen"
+          >
+          <div class="bolig-kort-tekst">
+            <h2>Faste avgifter</h2>
+            <p>
+              Utgifter som kommer uansett hvor mye du bruker boligen.
+              De faktureres som regel noen ganger i året.
+            </p>
+            <h3>Dette kommer fast</h3>
+            <ul>
+              <li>Kommunale avgifter for vann, avløp og renovasjon.</li>
+              <li>Boligforsikring og innboforsikring.</li>
+              <li>Eiendomsskatt der kommunen har innført den.</li>
+              <li>Felleskostnader hvis du bor i borettslag eller sameie.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Vedlikehold -->
+        <article class="bolig-kort">
+          <img
+            src="../bilder/tak.jpeg"
+            alt="Tak på en bolig i Bergen"
+          >
+          <div class="bolig-kort-tekst">
+            <h2>Vedlikehold</h2>
+            <p>
+              Den utgiften folk oftest glemmer. Den kommer ikke hver
+              måned, men den kommer, og da gjerne som et stort beløp
+              på én gang.
+            </p>
+            <h3>Slik kan du planlegge</h3>
+            <ul>
+              <li>Sett av et fast beløp hver måned.</li>
+              <li>Skriv ned hvor gammelt tak, kledning og bad er.</li>
+              <li>Ta små reparasjoner før de blir store.</li>
+              <li>Regn med mer vedlikehold i vestlandsklimaet.</li>
+            </ul>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- Eksempel på månedlige utgifter -->
+      <section class="graa-boks" aria-labelledby="manedlig-tittel">
+        <h2 id="manedlig-tittel">Eksempel på månedlige utgifter</h2>
+        <p>
+          Et oppdiktet eksempel for en bolig på 85 kvadratmeter med
+          to beboere. Tallene skal vise hvordan utgiftene fordeler
+          seg, ikke hva noe faktisk koster.
+        </p>
+        <table>
+          <caption>Oppdiktet månedsbudsjett for en bolig på 85 m²</caption>
+          <thead>
+            <tr>
+              <th scope="col">Utgift</th>
+              <th scope="col">Per måned</th>
+              <th scope="col">Per år</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Lån og renter</th>
+              <td>12 400 kr</td>
+              <td>148 800 kr</td>
+            </tr>
+            <tr>
+              <th scope="row">Strøm og nettleie</th>
+              <td>1 850 kr</td>
+              <td>22 200 kr</td>
+            </tr>
+            <tr>
+              <th scope="row">Kommunale avgifter</th>
+              <td>950 kr</td>
+              <td>11 400 kr</td>
+            </tr>
+            <tr>
+              <th scope="row">Forsikring</th>
+              <td>620 kr</td>
+              <td>7 440 kr</td>
+            </tr>
+            <tr>
+              <th scope="row">Avsatt til vedlikehold</th>
+              <td>1 500 kr</td>
+              <td>18 000 kr</td>
+            </tr>
+            <tr>
+              <th scope="row">Til sammen</th>
+              <td>17 320 kr</td>
+              <td>207 840 kr</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Hva vedlikeholdet koster -->
+      <section class="graa-boks" aria-labelledby="vedlikehold-tittel">
+        <h2 id="vedlikehold-tittel">Hva vedlikeholdet kan koste</h2>
+        <p>
+          Oppdiktede eksempeltall som viser hvorfor det lønner seg å
+          spare litt hver måned i stedet for å ta alt når regningen
+          kommer.
+        </p>
+        <table>
+          <caption>Oppdiktede eksempeltall for vanlig vedlikehold</caption>
+          <thead>
+            <tr>
+              <th scope="col">Arbeid</th>
+              <th scope="col">Omtrent hvor ofte</th>
+              <th scope="col">Eksempelpris</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Male kledningen</th>
+              <td>Hvert 8. år</td>
+              <td>90 000 kr</td>
+            </tr>
+            <tr>
+              <th scope="row">Bytte tak</th>
+              <td>Hvert 30. år</td>
+              <td>320 000 kr</td>
+            </tr>
+            <tr>
+              <th scope="row">Pusse opp bad</th>
+              <td>Hvert 25. år</td>
+              <td>280 000 kr</td>
+            </tr>
+            <tr>
+              <th scope="row">Bytte vinduer</th>
+              <td>Hvert 35. år</td>
+              <td>150 000 kr</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Rekkefølge -->
+      <section class="graa-boks" aria-labelledby="rekkefolge-tittel">
+        <h2 id="rekkefolge-tittel">Slik får du oversikt</h2>
+        <ol>
+          <li>Skriv opp alle utgiftene du vet om i dag.</li>
+          <li>Finn ut hva de fire siste strømregningene kom på.</li>
+          <li>Legg til et fast beløp til vedlikehold.</li>
+          <li>Regn ut hva terminbeløpet blir hvis renten stiger.</li>
+          <li>Se på summen og vurder om den er til å leve med.</li>
+        </ol>
+      </section>
+
+      <p class="tilbake">
+        <a href="index.html">Tilbake til forsiden</a>
+      </p>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2026 BIB</p>
+      <a href="https://jigsaw.w3.org/css-validator/check/referer"
+         class="css-merke">
+        <img src="../bilder/vcss.png" alt="Gyldig CSS" width="88" height="31">
+      </a>
+    </footer>
+  </body>
+</html>

@@ -40,7 +40,9 @@ public class DailyPower {
 
         double price = 0;
 
-        // TODO
+        for (int i = 0; i < usage.length; i++) {
+            price += usage[i] * prices[i];
+        }
 
         return price;
     }
@@ -53,7 +55,9 @@ public class DailyPower {
 
         double support = 0;
 
-        // TODO
+        if  (price > THRESHOLD) {
+            support = (price - THRESHOLD) * PERCENTAGE * usage;
+        }
 
         return support;
     }
@@ -61,11 +65,11 @@ public class DailyPower {
     // f) compute power support for a single day
     public static double computePowerSupport(double[] usage, double[] prices) {
 
-        double support = 0;
-
-        // TODO
-
-        return support;
+        double support = 0
+        
+        for (int i = 0; i < usage.length; i++) {
+        support += getSupport(usage[i], prices[i]);
+    }
     }
 
     private static final double NORGESPRIS_KWH = 0.5;
@@ -75,7 +79,9 @@ public class DailyPower {
 
         double price = 0;
 
-        // TODO
+        for (double forbruk : usage) {
+            price = price + 
+        }
 
         return price;
     }
